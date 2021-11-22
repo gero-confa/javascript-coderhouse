@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Inicio</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <nav>
+            <form action="POST" id="busqueda">
+                <input type="text" name="busqueda" id="busqueda__barra">
+                <input type="submit" value="busq.">
+            </form>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vendedores.html">Vendedores</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li>
+                    <a href="cart.html"><img src="images/cart.png" alt="carrito" id="carrito"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sideBar">
+            <!-- enlaces con filtros de busqueda deberian devolver en main -->
+            <div class="filtro">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><button id="filtrarCafe">Café</button></li>
+                    <li><button id="filtrarCafetera">Cafeteras</button></li>
+                    <li><button id="filtrarFiltros">Filtros</button></li>
+                    <li><button id="filtrarAccesorios">Accesorios</button></li>
+                </ul>
+            </div>
+            <div class="filtro">
+                <h3>Precio</h3>
+                <ul>
+                    <li><button id="max1k">Menos de AR$1000</button></li>
+                    <li><button id="max3k">AR$1000 a AR$3000</button></li>
+                    <li><button id="max5k">AR$3000 a AR$5000</button></li>
+                    <li><button id="max">Mayor a AR$5000</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navegacion">
+
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li>contacto@cafemandala.com.ar</li>
+                <li>0299 - 155420420</li>
+                <li>Mariano Moreno 69 - Neuquen</li>
+        </div>
+        <div>
+            <ul id="redes">
+                <li>
+                    <a href="https://instagram.com"><img src="images/iconmonstr-instagram-11.svg" alt="instagram"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com"><img src="images/iconmonstr-twitter-1.svg" alt="twitter"></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com"><img src="images/iconmonstr-linkedin-3.svg" alt="linkedin"></a>
+                </li>
+        </div>
+    </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

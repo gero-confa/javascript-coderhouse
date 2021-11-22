@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="Logo de la empresa">
+            </a>
+        </div>
+        <nav>
+            <form action="get" id="busqueda">
+                <input type="text" name="busqueda" id="busqueda__barra">
+                <input type="submit" value="busq.">
+            </form>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="vendedores.html">Vendedores</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li>
+                    <a href="cart.html"><img src="/images/cart.png" alt="carrito" id="carrito"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sideBar">
+            <!-- enlaces con filtros de busqueda deberian devolver en main -->
+            <div class="filtro">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><button>Café</button></li>
+                    <li><button>Cafeteras</button></li>
+                    <li><button>Filtros</button></li>
+                    <li><button>Accesorios</button></li>
+                </ul>
+            </div>
+            <div class="filtro">
+                <h3>Precio</h3>
+                <ul>
+                    <li><button>Menos de AR$1000</button></li>
+                    <li><button>AR$1000 a AR$3000</button></li>
+                    <li><button>AR$3000 a AR$5000</button></li>
+                    <li><button>Mayor a AR$5000</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="principal">
+            <div>
+                <div id="contacto">
+                    <form action="contacto" id="formContacto">
+                        <h3>Envianos tu consulta</h3>
+                        <input type="text" id="nombreContacto" placeholder="Nombre" required><br>
+                        <input type="email" id="mailContacto" placeholder="EMail" required><br>
+                        <input type="number" id="numeroContacto" placeholder="Telefono de contacto" required><br>
+                        <input type="text" id="textoContacto" placeholder="Escriba su mensaje" required><br>
+                        <input type="submit">
+                    </form>
+                </div>
+                <div id=colaboradores>
+                    <div id="empresas">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li>contacto@cafemandala.com.ar</li>
+                <li>0299 - 155420420</li>
+                <li>Mariano Moreno 69 - Neuquen</li>
+        </div>
+        <div>
+            <ul id="redes">
+                <li><img src="/images/iconmonstr-instagram-11.svg" alt="instagram"></li>
+                <li><img src="/images/iconmonstr-twitter-1.svg" alt="twitter"></li>
+                <li><img src="images/iconmonstr-linkedin-3.svg" alt="linkedin"></li>
+        </div>
+    </footer>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/contacto.js"></script>
+</body>
+
+</html>
