@@ -6,6 +6,7 @@ $("#mostrar").click(()  => {
 
 sesionUsuario = JSON.parse(localStorage.getItem("sesionUsuario"))
 if (sesionUsuario === true) {
-  $(".login[0]").hide()
-  $(".login[1]").hide()
-}
+  $(".login[0]").hide();
+  $(".login[1]").hide();
+  $(".navegacion").append()
+} 

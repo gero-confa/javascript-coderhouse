@@ -8,7 +8,9 @@ let filtroPrecio3k = document.getElementById("max3k");
 let filtroPrecio5k = document.getElementById("max5k");
 let filtroPrecioMax = document.getElementById("max");
 
-filtroCafe.onclick = () => { productosMostrados = listaProductos.filter(elemento => elemento.categoria === "cafe") }
+filtroCafe.onclick = () => { 
+  console.log(productosMostrados = listaProductos.filter(elemento => elemento.categoria === "cafe"));
+  productosMostrados = listaProductos.filter(elemento => elemento.categoria === "cafe") }
 filtroCafetera.onclick = () => { productosMostrados = listaProductos.filter(elemento => elemento) }
 filtroFiltros.onclick = () => { productosMostrados = listaProductos.filter(elemento => elemento) }
 filtroAccesorios.onclick = () => { productosMostrados = listaProductos.filter(elemento => elemento) }
