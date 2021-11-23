@@ -7,27 +7,21 @@ if (localStorage.getItem("carrito") == null) {
 }
 
 const finalizarCompra = () => {
-    totalCompra = 0
-    carrito.forEach(element => {
-        let valorSumar = Number(element.precio)
-        totalCompra += valorSumar
-    });
-    alert(`Tu total es de ${totalCompra}`)
+    let sesionIniciada = JSON.parse(localStorage.getItem("sesionUsuario"));
+    if (sesionIniciada === true) {
+        totalCompra = 0
+        carrito.forEach(element => {
+            let valorSumar = Number(element.precio)
+            totalCompra += valorSumar
+        });
+        alert(`Tu total es de ${totalCompra}`)
+    } else {
+        alert(`Necesitas iniciar sesion`)
+        window.location.href = "login.html"
+    }
 }
 
 btn.addEventListener("click", () => {
     finalizarCompra()
 })
 
-
-if (carrito.length > 0) {
-    const tienda = document.getElementById("miTienda");
-    for (producto of carrito) {
-        let contenido = document.createElement("div");
-        contenido.innerHTML = `<div class="producto">
-    <h3 class="producto__nombre">${producto.nombre}</h3>
-    <h4 class="producto__precio">${producto.precio}</h4>
-</div>`
-        tienda.appendChild(contenido)
-    }
-}

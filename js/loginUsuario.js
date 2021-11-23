@@ -7,8 +7,9 @@ if (localStorage.getItem("sesionUsuario" === null)) {
 }
 
 
+const login = document.getElementById("login");
 
-const loginUsuario = (e) => {
+login.addEventListener('submit', (e) => {
     e.preventDefault();
     sesionUsuario = localStorage.getItem(JSON.parse(sesionUsuario))
     if (sesionUsuario === true) {
@@ -35,7 +36,6 @@ const loginUsuario = (e) => {
                         let usuarioEnSesion = usuarioIngresando
                         localStorage.setItem("usuarioEnSesion", JSON.stringify(usuarioEnSesion))
                         window.location.href = "index.html"
-
                     } else {
                         alert("la contraseña es incorrecta")
                         break
@@ -44,7 +44,6 @@ const loginUsuario = (e) => {
             }
         }
     }
-}
+});
 
-const login = document.getElementById("login");
-login.addEventListener("submit", loginUsuario)
+

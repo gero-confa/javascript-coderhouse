@@ -1,12 +1,22 @@
+let usuarioEnUso = JSON.parse(localStorage.getItem("usuarioEnSesion"))
+let sesionIniciada = JSON.parse(localStorage.getItem("sesionUsuario"));
 
 
 $("#mostrar").click(()  => {
-  $("#contrasena").html(`<input type="text" id="contrasena" placeholder="Contraseña">`)
+  let element = document.getElementById('contrasena');
+  if (element.type === 'password') {
+    element.type = 'text'
+  } else if (element.type === 'text') {
+    element.type = 'password'
+  }
 });
 
-sesionUsuario = JSON.parse(localStorage.getItem("sesionUsuario"))
-if (sesionUsuario === true) {
-  $(".login[0]").hide();
-  $(".login[1]").hide();
-  $(".navegacion").append()
-} 
+
+$(() => {
+  if (sesionIniciada === true) {
+    console.log("holi")
+    $(".login").hide();
+    alert(`Ya has iniciado sesion como ${usuarioEnUso.alias}`)
+    window.location.href = "index.html"
+  }; 
+});
