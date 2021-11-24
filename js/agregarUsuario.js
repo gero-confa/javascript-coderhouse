@@ -31,6 +31,7 @@ if (localStorage.getItem("listaUsuarios") == null) {
     listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"))
 }
 
+
 function agregarUsuario(e) {
     e.preventDefault();
     let nuevoAlias = document.getElementById("nuevoAlias").value;

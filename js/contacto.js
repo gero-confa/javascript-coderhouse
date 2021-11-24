@@ -1,6 +1,3 @@
-
-
-
 $("#formContacto").submit(function(e) {
     e.preventDefault();
     $("#formContacto").hide()
@@ -14,8 +11,6 @@ $("#formContacto").submit(function(e) {
 
 $("#colaboradores").append(`<button id="btn1">NUESTROS COLABORADORES</button>`);
 
-
-// ENTREGABLE AJAX
 
 const URLJSON = "/JSON/colaboradores.json"
 

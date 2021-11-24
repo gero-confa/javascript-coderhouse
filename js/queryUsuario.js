@@ -14,7 +14,6 @@ $("#mostrar").click(()  => {
 
 $(() => {
   if (sesionIniciada === true) {
-    console.log("holi")
     $(".login").hide();
     alert(`Ya has iniciado sesion como ${usuarioEnUso.alias}`)
     window.location.href = "index.html"

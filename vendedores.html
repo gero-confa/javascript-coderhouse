@@ -17,9 +17,8 @@
             </a>
         </div>
         <nav>
-            <form action="POST" id="busqueda">
-                <input type="text" name="busqueda" id="busqueda__barra">
-                <input type="submit" value="busq.">
+            <form id="busqueda">
+                <input type="text" name="busqueda" id="busqueda__barra" placeholder="Buscar productos" onkeyup="buscarProductos()">
             </form>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,42 +26,38 @@
                 <li><a href="vendedores.html">Vendedores</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li>
-                    <a href="cart.html"><img src="/images/cart.png" alt="carrito" id="carrito"></a>
+                    <a href="cart.html"><img src="images/cart.png" alt="carrito" id="carrito"></a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="sideBar">
-            <!-- enlaces con filtros de busqueda deberian devolver en main -->
-            <div class="filtro">
-                <h3>Categorias</h3>
-                <ul>
-                    <li><a href="">Cafe</a></li>
-                    <li><a href="">Cafeteras</a></li>
-                    <li><a href="">Filtros</a></li>
-                    <li><a href="">Accesorios</a></li>
-                </ul>
-            </div>
-            <div class="filtro">
-                <h3>Precio</h3>
-                <ul>
-                    <li>
-                        <a href=""></a>Menos de AR$1000</li>
-                    <li>
-                        <a href=""></a>AR$1000 a AR$3000</li>
-                    <li>
-                        <a href=""></a>AR$3000 a AR$5000</li>
-                    <li>
-                        <a href=""></a>Mayor a AR$5000</li>
-                </ul>
-            </div>
+        <div class="filtro">
+            <h3>Categorias</h3>
+            <ul>
+                <li><button id="filtrarCafe">Café</button></li>
+                <li><button id="filtrarCafetera">Cafeteras</button></li>
+                <li><button id="filtrarFiltros">Filtros</button></li>
+                <li><button id="filtrarAccesorios">Accesorios</button></li>
+            </ul>
         </div>
+        <div class="filtro">
+            <h3>Precio</h3>
+            <ul>
+                <li><button id="max1k">Menos de AR$1000</button></li>
+                <li><button id="max3k">AR$1000 a AR$3000</button></li>
+                <li><button id="max5k">AR$3000 a AR$5000</button></li>
+                <li><button id="max">Más de AR$500</button></li>
+            </ul>
+            </br>
+            <li><button id="borrarFiltros">QUITAR FILTROS</button></li>
+        </div>
+    </div>
         <div>
             <div class="navegacion">
-                <div id="vendedorTarjetaCreacion">
+                <div class="login" id="vendedorTarjetaCreacion">
                     <h5>CREAR NUEVA CUENTA DE VENDEDOR</h5>
-                    </br>
                     <form action="" id="crearVendedor">
                         <input type="text" id="nombreVendedor" placeholder="Nombre de vendedor"></br>
                         <input type="text" id="cuitVendedor" placeholder="cuit"></br>
@@ -71,9 +66,8 @@
                         <input type="submit" value="Crear">
                     </form>
                 </div>
-                <div id="login">
+                <div class="login" id="login">
                     <h5>YA TENGO UNA CUENTA</h5>
-                    </br>
                     <form action="" id="ingresoVendedor">
                         <label for="nombreDeUsuario">Ingresa tu nombre de usuario:</label>
                         <input type="text" id="nombreDeUsuario"> </br>
@@ -82,9 +76,8 @@
                         <input type="submit">
                     </form>
                 </div>
-                <div id="seccionCrearProducto">
+                <div class="login" id="seccionCrearProducto">
                     <h5>CREAR PRODUCTO</h3>
-                        </br>
                         <form action="" id="crearProducto">
                             <input type="text" id="productoNombre" placeholder="Nombre de producto">
                             <input type="number" id="productoPrecio" placeholder="Precio del producto">
@@ -100,9 +93,6 @@
                         </form>
                 </div>
             </div>
-        </div>
-        <div id="miTienda">
-
         </div>
         </div>
     </main>
@@ -124,6 +114,7 @@
     <script src="js/productos.js"></script>
     <script src="js/agregarVendedor.js"></script>
     <script src="js/vendedores.js"></script>
+    <script src="js/queryVendedor.js"></script>
 </body>
 
 </html>

@@ -17,9 +17,8 @@
             </a>
         </div>
         <nav>
-            <form  id="busqueda">
-                <input type="text" name="busqueda" id="busqueda__barra">
-                <input type="submit" value="busq.">
+            <form id="busqueda">
+                <input type="text" name="busqueda" id="busqueda__barra" placeholder="Buscar productos" onkeyup="buscarProductos()">
             </form>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -34,7 +33,6 @@
     </header>
     <main>
         <div class="sideBar">
-            <!-- enlaces con filtros de busqueda deberian devolver en main -->
             <div class="filtro">
                 <h3>Categorias</h3>
                 <ul>
@@ -52,7 +50,7 @@
                     <li><button id="max5k">AR$3000 a AR$5000</button></li>
                     <li><button id="max">Más de AR$500</button></li>
                 </ul>
-            </br>
+                </br>
                 <li><button id="borrarFiltros">QUITAR FILTROS</button></li>
             </div>
         </div>
@@ -86,4 +84,5 @@
     <script src="js/main.js"></script>
     <script src="js/filtros.js"></script>
 </body>
+
 </html>

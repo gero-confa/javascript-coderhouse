@@ -32,6 +32,7 @@ const ingresoVendedor = (e) => {
                         localStorage.setItem("sesionVendedor", JSON.stringify(sesionVendedor))
                         let vendedorEnSesion = vendedorIngresando
                         localStorage.setItem("vendedorEnSesion", JSON.stringify(vendedorEnSesion))
+                        window.location.href = "vendedores.html"
                     } else {
                         alert("la contraseña es incorrecta")
                         break
@@ -41,9 +42,6 @@ const ingresoVendedor = (e) => {
         }
     }
 }
-
-const iniciarSesion = document.getElementById("ingresoVendedor");
-iniciarSesion.addEventListener("submit", ingresoVendedor)
 
 
 const agregarProducto = () => {
@@ -55,12 +53,13 @@ const agregarProducto = () => {
     listaProductos.push(nuevoProducto)
 }    
 
-
-
 const productoLocal = () => {
     localStorage.setItem("listaProductos", JSON.stringify(listaProductos))
 };
 
+
+const iniciarSesion = document.getElementById("ingresoVendedor");
+iniciarSesion.addEventListener("submit", ingresoVendedor)
 
 let formularioCreacion = document.getElementById("crearProducto");
 formularioCreacion.addEventListener("submit", agregarProducto)

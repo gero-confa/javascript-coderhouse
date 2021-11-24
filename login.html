@@ -17,9 +17,8 @@
             </a>
         </div>
         <nav>
-            <form action="POST" id="busqueda">
-                <input type="text" name="busqueda" id="busqueda__barra">
-                <input type="submit" value="busq.">
+            <form id="busqueda">
+                <input type="text" name="busqueda" id="busqueda__barra" placeholder="Buscar productos" onkeyup="buscarProductos()">
             </form>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,14 +26,13 @@
                 <li><a href="vendedores.html">Vendedores</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li>
-                    <a href="cart.html"><img src="/images/cart.png" alt="carrito" id="carrito"></a>
+                    <a href="cart.html"><img src="images/cart.png" alt="carrito" id="carrito"></a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="sideBar">
-            <!-- enlaces con filtros de busqueda deberian devolver en main -->
             <div class="filtro">
                 <h3>Categorias</h3>
                 <ul>
@@ -54,10 +52,9 @@
                 </ul>
             </div>
         </div>
-        <div class="principal">
+        <div class="navegacion">
             <div class="login">
                 <h5>CREAR NUEVA CUENTA</h5>
-
                 <form action="" id="crearUsuario">
                     <input type="text" id="nuevoAlias" placeholder="Nombre de usuario">
                     <input type="text" id="nuevoNombre" placeholder="Nombre completo ">
@@ -77,10 +74,6 @@
                     <button type="submit" id="userLogin">login</button>
                 </form>
             </div>
-        </div>
-        </div>
-        <div class="navegacion">
-
         </div>
     </main>
     <footer>
